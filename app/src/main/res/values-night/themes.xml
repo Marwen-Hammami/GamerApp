@@ -7,4 +7,13 @@
         <item name="android:navigationBarColor">@color/Primary</item>
     </style>
     <style name="Theme.GamerApp" parent="Base.Theme.GamerApp" />
+    <!-- Custom TextInputLayout Colors -->
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="startIconTint">@color/inputColor</item>
+        <item name="endIconTint">@color/inputColor</item>
+        <item name="android:textColorHint">@color/inputColor</item>
+        <item name="hintTextColor">@color/inputColor</item>
+        <item name="suffixTextColor">@color/inputColor</item>
+    </style>
 </resources>
