@@ -6,16 +6,20 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import tn.sim.gamerapp.databinding.ValidationNumberBinding
 
 class ValidationNumber : AppCompatActivity()  {
+
+    private lateinit var binding : ValidationNumberBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.validation_number)
+        binding = ValidationNumberBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         initBackArrowToolBar()
 
-        val btnVerify: TextView = findViewById(R.id.btnVerify)
-        btnVerify.setOnClickListener {
+        binding.btnVerify.setOnClickListener {
             val intent = Intent(this, NewPassword::class.java)
             startActivity(intent)
         }
@@ -23,8 +27,7 @@ class ValidationNumber : AppCompatActivity()  {
 
     // Tool Bar Back Arrow START *************************************
     fun initBackArrowToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
 

@@ -6,16 +6,20 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import tn.sim.gamerapp.databinding.ForgotPasswordBinding
 
 class ForgotPassword : AppCompatActivity() {
+
+    private lateinit var binding : ForgotPasswordBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.forgot_password)
+        binding = ForgotPasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         initBackArrowToolBar()
 
-        val btnSubmit: TextView = findViewById(R.id.btnSubmit)
-        btnSubmit.setOnClickListener {
+        binding.btnSubmit.setOnClickListener {
             val intent = Intent(this, ValidationNumber::class.java)
             startActivity(intent)
         }
@@ -24,8 +28,7 @@ class ForgotPassword : AppCompatActivity() {
 
     // Tool Bar Back Arrow START *************************************
     fun initBackArrowToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
 

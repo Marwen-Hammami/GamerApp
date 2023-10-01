@@ -4,11 +4,16 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import tn.sim.gamerapp.databinding.NewPasswordBinding
 
 class NewPassword : AppCompatActivity() {
+
+    private lateinit var binding : NewPasswordBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.new_password)
+        binding = NewPasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         initBackArrowToolBar()
 
@@ -16,8 +21,7 @@ class NewPassword : AppCompatActivity() {
 
     // Tool Bar Back Arrow START *************************************
     fun initBackArrowToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
 

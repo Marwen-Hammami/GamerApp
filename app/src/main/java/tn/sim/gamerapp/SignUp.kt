@@ -4,19 +4,23 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import tn.sim.gamerapp.databinding.SignupBinding
 
 class SignUp : AppCompatActivity()  {
+
+    private lateinit var binding : SignupBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup)
+        binding = SignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         initBackArrowToolBar()
     }
 
     // Tool Bar Back Arrow START *************************************
     fun initBackArrowToolBar() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.toolbar)
         supportActionBar?.title = ""
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
 
