@@ -25,6 +25,7 @@
         <activity android:name=".ForgotPassword"/>
         <activity android:name=".NewPassword"/>
         <activity android:name=".ValidationNumber"/>
+        <activity android:name=".HomeActivity"/>
     </application>
 
 </manifest>

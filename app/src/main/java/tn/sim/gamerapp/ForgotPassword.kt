@@ -6,6 +6,8 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
+import com.google.android.material.snackbar.Snackbar
 import tn.sim.gamerapp.databinding.ForgotPasswordBinding
 
 class ForgotPassword : AppCompatActivity() {
@@ -19,10 +21,10 @@ class ForgotPassword : AppCompatActivity() {
 
         initBackArrowToolBar()
 
-        binding.btnSubmit.setOnClickListener {
-            val intent = Intent(this, ValidationNumber::class.java)
-            startActivity(intent)
-        }
+        setInputsEmptyErrors()
+
+        initSubmitClick()
+        initSmsClick()
 
     }
 
@@ -44,4 +46,57 @@ class ForgotPassword : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
     // Tool Bar Back Arrow END ***************************************
+
+    // Empty Inputs Errors START *************************************
+    private fun setInputsEmptyErrors() {
+        setEmailInputEmptyError()
+    }
+    private fun setEmailInputEmptyError() {
+        binding.emailTxt.setOnFocusChangeListener { view, hasFocus ->
+            if (!hasFocus) {
+                if (binding.emailTxt.text.toString().isEmpty()) {
+                    setEmailError()
+                } else {
+                    binding.EmailAddress.error = null
+                }
+            }
+        }
+    }
+    private fun setEmailError() {
+        binding.EmailAddress.error = getString(R.string.not_empty)
+    }
+    // Empty Inputs Errors END ***************************************
+
+    // Buttons On Clicks START ***************************************
+    private fun initSubmitClick() {
+        binding.btnSubmit.setOnClickListener {
+            if (binding.emailTxt.text.toString().isEmpty()) {
+                setEmailError()
+                erreurSnack()
+            } else {
+                val intent = Intent(this, ValidationNumber::class.java)
+                    .putExtra("CODE", "1234")
+                startActivity(intent)
+            }
+        }
+    }
+    private fun initSmsClick() {
+        binding.btnSendSms.setOnClickListener {
+            if (binding.emailTxt.text.toString().isEmpty()) {
+                setEmailError()
+                erreurSnack()
+            } else {
+                val intent = Intent(this, ValidationNumber::class.java)
+                    .putExtra("CODE", "6789")
+                startActivity(intent)
+            }
+        }
+    }
+    private fun erreurSnack() {
+        val snackError = Snackbar.make(binding.contextView,"You have some errors in your inputs!", Snackbar.LENGTH_LONG)
+            .setTextColor(ContextCompat.getColor(this, R.color.white))
+        snackError.show()
+    }
+    // Buttons On Clicks END *****************************************
+
 }
