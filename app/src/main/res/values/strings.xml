@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GamerApp</string>
+    <string name="registerNow">
+        <u>Register Now</u>
+    </string>
+    <string name="termsAndConditions">
+        By registering you agree to our <u>Terms &amp; \n
+        Conditions</u> and <u>Privacy Policy</u>
+    </string>
+    <string name="resondCode">
+        <u>Resend code</u>
+    </string>
+</resources>
