@@ -18,5 +18,7 @@
     <color name="colorSecondaryOverLay">#CC0c0f18</color>
 
     <color name="inputColor">#f90043</color>
+    <color name="toolbarColor">#f90043</color>
+    <color name="cardBackgroundColor">#FFFFFFFF</color>
 
 </resources>

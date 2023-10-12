@@ -7,7 +7,9 @@
         <item name="android:navigationBarColor">@color/Primary</item>
         <item name="snackbarStyle">@style/AppSnackbarStyle</item>
     </style>
-    <style name="Theme.GamerApp" parent="Base.Theme.GamerApp" />
+    <style name="Theme.GamerApp" parent="Base.Theme.GamerApp" >
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
     <!-- Custom TextInputLayout Colors -->
     <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="boxStrokeColor">@color/text_input_box_stroke</item>
