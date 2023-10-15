@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/newsFragment"
-        android:name="tn.sim.gamerapp.NewsFragment"
+        android:name="tn.sim.gamerapp.fragments.NewsFragment"
         android:label="News"
         tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/storeFragment"
-        android:name="tn.sim.gamerapp.StoreFragment"
+        android:name="tn.sim.gamerapp.fragments.StoreFragment"
         android:label="Store"
         tools:layout="@layout/fragment_store" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="tn.sim.gamerapp.ProfileFragment"
+        android:name="tn.sim.gamerapp.fragments.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

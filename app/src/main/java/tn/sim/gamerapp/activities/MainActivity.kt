@@ -1,21 +1,11 @@
-package tn.sim.gamerapp
+package tn.sim.gamerapp.activities
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
-import android.text.Selection
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.TextPaint
-import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
-import android.view.View
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import tn.sim.gamerapp.R
 import tn.sim.gamerapp.databinding.LoginBinding
 
 

@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GamerApp"
         tools:targetApi="31" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".NewPassword" />
-        <activity android:name=".ValidationNumber" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".activities.SignUp" />
+        <activity android:name=".activities.ForgotPassword" />
+        <activity android:name=".activities.NewPassword" />
+        <activity android:name=".activities.ValidationNumber" />
+        <activity android:name=".activities.HomeActivity" />
     </application>
 
 </manifest>

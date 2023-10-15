@@ -17,7 +17,7 @@
         >
 
         <ImageView
-            android:id="@+id/gameBanner"
+            android:id="@+id/gameImage"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:adjustViewBounds="true"
@@ -35,11 +35,11 @@
             android:text="Grand Theft Auto 6"
             android:textColor="@color/Primary"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/gameBanner"
+            app:layout_constraintStart_toEndOf="@+id/gameImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/console"
+            android:id="@+id/gamePlateform"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PS5 Game"
@@ -48,21 +48,31 @@
             android:layout_marginTop="50dp"/>
 
         <ImageView
-            android:id="@+id/cartAdd"
+            android:id="@+id/gameIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add_shopping_cart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/console" />
+            app:layout_constraintTop_toBottomOf="@+id/gamePlateform" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/gamePrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="70.0 $"
+            android:text="70.0"
+            android:textColor="@color/Primary"
             android:layout_marginTop="15dp"
-            app:layout_constraintStart_toStartOf="@+id/console"
-            app:layout_constraintTop_toBottomOf="@+id/cartAdd" />
+            app:layout_constraintStart_toStartOf="@+id/gamePlateform"
+            app:layout_constraintTop_toBottomOf="@+id/gameIcon" />
+
+        <TextView
+            android:id="@+id/dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" $"
+            android:textColor="@color/Primary"
+            app:layout_constraintStart_toEndOf="@+id/gamePrice"
+            app:layout_constraintTop_toTopOf="@+id/gamePrice" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

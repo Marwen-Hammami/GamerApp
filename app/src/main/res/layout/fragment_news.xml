@@ -4,25 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsFragment">
+    tools:context=".fragments.NewsFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <include layout="@layout/game_banner_card" />
-        <include layout="@layout/game_banner_card" />
-        <include layout="@layout/game_banner_card" />
-        <include layout="@layout/game_banner_card" />
-    </LinearLayout>
-
-    </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newsRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_news" />
 
 </FrameLayout>

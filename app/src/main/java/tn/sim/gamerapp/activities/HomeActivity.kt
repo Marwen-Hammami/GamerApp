@@ -1,4 +1,4 @@
-package tn.sim.gamerapp
+package tn.sim.gamerapp.activities
 
 import android.os.Bundle
 import android.view.Menu
@@ -7,13 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+import tn.sim.gamerapp.R
 import tn.sim.gamerapp.databinding.HomeBinding
 
 class HomeActivity: AppCompatActivity() {
@@ -77,7 +77,11 @@ class HomeActivity: AppCompatActivity() {
     }
 
     fun changeTopBarTitleSwitchFragment() {
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.newsFragment, R.id.storeFragment, R.id.profileFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.newsFragment,
+            R.id.storeFragment,
+            R.id.profileFragment
+        ))
 
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
